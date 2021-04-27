@@ -32,14 +32,23 @@ Building Rocket.Chat code requires a minimum of 8 GB of RAM memory on the Linux 
 >
 > **NOTE:** During build, you may notice _WARNING_ related to _peer dependencies_ or other transitive dependencies. They are typically safe to ignore unless you are coding the feature or modules that require them.
 
-1. Open a **WSL 2 shell** \(not Powershell\). Update Linux `sudo apt-get update sudo apt-get dist-upgrade`
+1. Open a **WSL 2 shell** \(not Powershell\). Update Linux 
+
+```text 
+sudo apt-get update sudo apt-get dist-upgrade
+```
+
 2. Install tools required
 
-   `sudo apt-get install build-essential git curl python2-minimal`
+```text 
+sudo apt-get install build-essential git curl python2-minimal
+```
 
 3. Install meteor
 
-   `curl https://install.meteor.com/ | sh`
+```text 
+curl https://install.meteor.com/ | sh
+```
 
    \(Under some circumstances, you may need to install a specific \(older\) release of Meteor instead of the latest, always check the `.meteor/release` file of the Github code repository to determine if you need to do this before you install meteor\)
 
@@ -51,19 +60,27 @@ Building Rocket.Chat code requires a minimum of 8 GB of RAM memory on the Linux 
 
 4. Make sure you are on the WSL 2 filesystem, `pwd` should return `/home/yourusername` Get rocket.chat code:
 
-   `git clone https://github.com/RocketChat/Rocket.Chat.git`
+```text 
+git clone https://github.com/RocketChat/Rocket.Chat.git
+```text 
 
    \(you may want to fork the code on Github first, and then clone your fork\)
 
 5. Install modules
 
-   `cd Rocket.Chat`
+```text 
+cd Rocket.Chat
+```
 
-   `meteor npm install`
+```text 
+meteor npm install
+```
 
 6. Start building \(the first build can _take 10 or more minutes_, and you may see various warnings or minor errors -- please be patient; subsequent dev builds after the first will be 5 minutes or less\)
 
-   `meteor npm start`
+```text 
+meteor npm start
+```
 
 When the server is ready, you will see a box with "Server Running" title:
 
