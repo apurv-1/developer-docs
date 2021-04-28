@@ -62,7 +62,7 @@ curl https://install.meteor.com/ | sh
 
 ```text 
 git clone https://github.com/RocketChat/Rocket.Chat.git
-```text 
+``` 
 
    \(you may want to fork the code on Github first, and then clone your fork\)
 
